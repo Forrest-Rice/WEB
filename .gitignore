@@ -19,8 +19,14 @@ pnpm-debug.log*
 # Editor directories and files
 .idea
 .vscode
+.history
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# package
+/package-lock.json*
+
+/yarn.lock*

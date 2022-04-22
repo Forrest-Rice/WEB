@@ -1,18 +1,17 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+<!--
+ * @Author: By
+ * @Date: 2022-04-18 10:25:59
+ * @LastEditTime: 2022-04-18 14:36:56
+ * @LastEditors: By
+ * @Description:
+ * @FilePath: \p-p\src\views\HomeView.vue
+ * 可以输入预定的版权声明、个性签名、空行等
+-->
+<template lang="pug">
+div
 </template>
-
-<script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-
-@Options({
-  components: {
-    HelloWorld,
-  },
-})
-export default class HomeView extends Vue {}
+<script lang="ts" setup>
 </script>
+
+<style scoped lang="scss">
+</style>

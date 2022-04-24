@@ -10,4 +10,10 @@
 <template lang="pug">
 .exampleViewBox
   span.exampleView-span exampleView
+  independentMenu
 </template>
+
+<script lang="ts" setup>
+// eslint-disable-next-line no-unused-vars
+import independentMenu from '@/plugins/independentMenu.vue';
+</script>

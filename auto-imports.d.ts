@@ -2,6 +2,7 @@
 // We suggest you to commit this file into source control
 declare global {
   const ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
+  const ElIcon: typeof import('element-plus/es')['ElIcon']
   const ElMenu: typeof import('element-plus/es')['ElMenu']
   const ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
   const ElTable: typeof import('element-plus/es')['ElTable']

@@ -1,7 +1,7 @@
 /*
  * @Author: By
  * @Date: 2022-04-18 10:28:22
- * @LastEditTime: 2022-04-21 11:42:09
+ * @LastEditTime: 2022-05-11 18:52:52
  * @LastEditors: By
  * @Description:
  * @FilePath: \webProject\src\router\module\example.router.ts
@@ -9,20 +9,8 @@
  */
 module.exports = [
   {
-    path: '/exampleView',
-    name: 'example',
-    component: () => import('@/views/example/exampleView.vue'),
-    children: [
-      {
-        path: '/exampleView/glassCards',
-        name: 'GlassCardsDemo',
-        component: () => import('@/views/example/glassCards.vue'),
-      },
-    ],
-  },
-  {
-    path: '/exampleView/glassCards',
-    name: 'GlassCardsDemo',
-    component: () => import('@/views/example/glassCards.vue'),
+    path: '/Friday',
+    name: 'Friday',
+    component: () => import('@/views/Friday/friday_Index.vue'),
   },
 ];

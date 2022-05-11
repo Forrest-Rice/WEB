@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 /*
  * @Author: By
  * @Date: 2022-04-18 10:10:19
- * @LastEditTime: 2022-04-21 15:45:23
+ * @LastEditTime: 2022-05-11 18:59:33
  * @LastEditors: By
  * @Description:
  * @FilePath: \webProject\src\router\index.ts
@@ -45,8 +46,6 @@ const router = createRouter({
 });
 
 watch(() => router.currentRoute.value.path, (newValue, oldValue) => {
-  console.log('watch', newValue);
-  console.log(oldValue);
 }, { immediate: true });
 
 export default router;

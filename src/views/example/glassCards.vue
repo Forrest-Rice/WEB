@@ -1,10 +1,10 @@
 <!--
  * @Author: By
  * @Date: 2022-04-21 11:28:54
- * @LastEditTime: 2022-04-21 16:39:06
+ * @LastEditTime: 2022-05-17 00:01:11
  * @LastEditors: By
  * @Description:
- * @FilePath: \webProject\src\views\example\glassCards.vue
+ * @FilePath: \WEB\src\views\example\glassCards.vue
  * 可以输入预定的版权声明、个性签名、空行等
 -->
 <template lang="pug">

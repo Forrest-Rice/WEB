@@ -37,6 +37,7 @@
 
     .el-image {
         height: 100%;
+
         img {
             display: inline-block;
         }

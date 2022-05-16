@@ -1,10 +1,10 @@
 /*
  * @Author: By
  * @Date: 2022-04-18 14:37:40
- * @LastEditTime: 2022-04-21 11:23:35
+ * @LastEditTime: 2022-05-17 00:05:57
  * @LastEditors: By
  * @Description:
- * @FilePath: \webProject\src\router\module\typescriptLearn.router.ts
+ * @FilePath: \WEB\src\router\module\typescriptLearn.router.ts
  * 可以输入预定的版权声明、个性签名、空行等
  */
 module.exports = [

@@ -4,6 +4,7 @@ declare global {
   const ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
   const ElIcon: typeof import('element-plus/es')['ElIcon']
   const ElImage: typeof import('element-plus/es')['ElImage']
+  const ElInput: typeof import('element-plus/es')['ElInput']
   const ElMenu: typeof import('element-plus/es')['ElMenu']
   const ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
   const ElTable: typeof import('element-plus/es')['ElTable']

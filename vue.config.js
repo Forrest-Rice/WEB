@@ -31,5 +31,9 @@ module.exports = defineConfig({
   },
   devServer: {
     port: 9000,
+    // warnings: false,
+    // errors: false,
+    // lintOnSave: false
+
   },
 });

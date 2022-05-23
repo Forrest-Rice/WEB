@@ -2,10 +2,10 @@
 /*
  * @Author: By
  * @Date: 2022-04-18 10:10:19
- * @LastEditTime: 2022-05-11 18:59:33
+ * @LastEditTime: 2022-05-24 00:10:54
  * @LastEditors: By
  * @Description:
- * @FilePath: \webProject\src\router\index.ts
+ * @FilePath: \WEB\src\router\index.ts
  * 可以输入预定的版权声明、个性签名、空行等
  */
 import { watch } from 'vue';
@@ -19,7 +19,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'Home',
 
-    component: () => import('@/plugins/menuIndex.vue'),
+    component: () => import('@/plugins/menuTwo.vue'),
     children: [
       {
         path: '/redirect/:path(.*)',

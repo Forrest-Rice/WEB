@@ -1,7 +1,7 @@
 <!--
  * @Author: By
  * @Date: 2022-04-18 10:10:19
- * @LastEditTime: 2022-05-17 00:01:39
+ * @LastEditTime: 2022-05-24 01:42:31
  * @LastEditors: By
  * @Description:
  * @FilePath: \WEB\src\App.vue
@@ -34,4 +34,11 @@ const locale = zhCn; // element-plus 设置为中文
 //   color: #2c3e50;
 //   margin-top: 60px;
 // }
+#app {
+  background-color: #DCDCDC;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  // padding: 0 1vw;
+}
 </style>

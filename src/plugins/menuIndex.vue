@@ -1,7 +1,7 @@
 <!--
  * @Author: By
  * @Date: 2022-04-18 15:36:22
- * @LastEditTime: 2022-05-17 00:05:48
+ * @LastEditTime: 2022-05-24 00:30:44
  * @LastEditors: By
  * @Description:
  * @FilePath: \WEB\src\plugins\menuIndex.vue
@@ -34,6 +34,10 @@
                 </transition>
             </router-view>
         </div>
+
+        <div>
+            <router-view></router-view>
+        </div>
     </div>
 </template>
 
@@ -51,15 +55,15 @@ const menuArr = ref<any>([]);
 const globalProperties = useGetGlobalProperties().$SkipSwitchName;
 
 files.keys().forEach((key) => {
-  menuArr.value.push(...files(key));
+    menuArr.value.push(...files(key));
 });
 
 const isCollapse = ref(false);
 const handleOpen = (key: string, keyPath: string[]) => {
-  //   console.log(key, keyPath);
+    //   console.log(key, keyPath);
 };
 const handleClose = (key: string, keyPath: string[]) => {
-  //   console.log(key, keyPath);
+    //   console.log(key, keyPath);
 };
 </script>
 

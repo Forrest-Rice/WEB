@@ -1,7 +1,7 @@
 /*
  * @Author: By
  * @Date: 2022-05-24 00:28:53
- * @LastEditTime: 2022-05-24 02:40:24
+ * @LastEditTime: 2022-05-24 17:43:17
  * @LastEditors: By
  * @Description:   z
  * @FilePath: \WEB\src\router\module\hotel.router.ts
@@ -19,8 +19,19 @@ module.exports = [
   //   component: () => import('@/views/example/glassCards.vue'),
   // },
   {
-    path: '/hotelHome',
+    path: '/',
     name: 'hotelHome',
     component: () => import('@/views/hotel/hotelHome.vue'),
+  },
+  {
+    path: '/announcementPage',
+    name: 'announcementPage',
+    component: () => import('@/views/hotel/announcementPage.vue'),
+  },
+  // orders
+  {
+    path: '/ordersPage',
+    name: 'ordersPage',
+    component: () => import('@/views/hotel/ordersPage.vue'),
   },
 ];

@@ -2,16 +2,14 @@
 /*
  * @Author: By
  * @Date: 2022-04-18 10:10:19
- * @LastEditTime: 2022-05-24 00:10:54
+ * @LastEditTime: 2022-05-24 17:49:41
  * @LastEditors: By
  * @Description:
  * @FilePath: \WEB\src\router\index.ts
  * 可以输入预定的版权声明、个性签名、空行等
  */
 import { watch } from 'vue';
-import {
-  createRouter, createWebHashHistory, RouteRecordRaw,
-} from 'vue-router';
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 
 const routes: Array<RouteRecordRaw> = [
 
@@ -23,7 +21,7 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       {
         path: '/redirect/:path(.*)',
-        component: () => import('../views/HomeView.vue'),
+        component: () => import('../views/hotel/hotelHome.vue'),
       }, {
         path: '/:catchAll(.*)',
         name: '404',

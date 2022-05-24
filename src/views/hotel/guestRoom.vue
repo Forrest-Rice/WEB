@@ -1,7 +1,7 @@
 <!--
  * @Author: By
  * @Date: 2022-05-24 00:29:48
- * @LastEditTime: 2022-05-24 02:26:04
+ * @LastEditTime: 2022-05-24 16:16:37
  * @LastEditors: By
  * @Description: dd
  * @FilePath: \WEB\src\views\hotel\guestRoom.vue
@@ -38,12 +38,11 @@
                 </el-card>
             </div>
         </main>
-        <footerPage></footerPage>
+        <!-- <footerPage></footerPage> -->
     </div>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
-import footerPage from '@/components/fotterPage.vue'
 
 // const radio3 = ref();
 const typeButtonList = ref([`全部`, `单人间`, `双人间`, `商务套间`]);
@@ -56,10 +55,10 @@ const homeList = ref([1, 2, 3, 4, 5, 6, 7, 8, 9])
 <style lang="scss" scoped>
 .guestRoom {
     // padding: 3vw;
-    height: 100vh;
+    // height: 100vh;
 
     header {
-        margin-top: 2vh;
+        // margin-top: 2vh;
 
         .room-type,
         .Price {
@@ -97,12 +96,12 @@ const homeList = ref([1, 2, 3, 4, 5, 6, 7, 8, 9])
 
     main {
         width: 100%;
-        height: 65vh;
+        height: 63vh;
         margin-top: 2vh;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        align-content: center;
+        align-content: space-between;
         justify-content: space-evenly;
         align-items: center;
         background-color: #FFFFFF;

@@ -1,127 +1,170 @@
 <!--
  * @Author: By
- * @Date: 2022-05-24 00:06:56
- * @LastEditTime: 2022-05-24 02:35:32
+ * @Date: 2022-05-24 15:29:41
+ * @LastEditTime: 2022-05-24 17:46:56
  * @LastEditors: By
- * @Description: dd
+ * @Description:
  * @FilePath: \WEB\src\plugins\menuTwo.vue
  * 可以输入预定的版权声明、个性签名、空行等
 -->
-
 <template>
-  <div class="menu">
-    <div class="menu-box">
-      <el-menu :default-active="activeIndex2" class="el-menu" mode="horizontal" @select="handleSelect" router>
-        <!-- <span class="logo"></span><span>凯曼</span><span>Hotel</span> -->
-        <div class="logo-box"><span class="name">凯曼</span><span class="hotel">Hotel</span></div>
-        <el-menu-item index="/hotelHome">首页</el-menu-item>
-        <el-menu-item index="/guestRoom">客房</el-menu-item>
-        <el-menu-item index="3">公告</el-menu-item>
-        <el-menu-item class="end" index="4">我的订单</el-menu-item>
-        <!-- <el-menu-item class="login" index="5">登录</el-menu-item>-->
-        <el-sub-menu class="login" index="2">
-          <template #title>{{ userName }}</template>
-          <el-menu-item index="2-1">登录</el-menu-item>
-          <el-menu-item index="2-2">注册</el-menu-item>
-        </el-sub-menu>
-      </el-menu>
-      <div class="login" index="6">
-        <!-- <span>登录</span>
-        <span>注册</span> -->
+  <div class="common-layout">
+    <el-container>
+      <el-header>
+        <el-menu :default-active="activeIndex" mode="horizontal" @select="handleSelect" router>
+          <el-menu-item class="logo"><span class="name">凯曼</span><span class="hotel">Hotel</span></el-menu-item>
+          <el-menu-item>
+            <el-menu-item index="/redirect/">首页</el-menu-item>
+            <el-menu-item index="/guestRoom">客房</el-menu-item>
+            <el-menu-item index="/announcementPage">公告</el-menu-item>
+            <el-menu-item class="end" index="/ordersPage">我的订单</el-menu-item>
+          </el-menu-item>
+          <el-menu-item class="login-box">
+            <el-menu-item>登录</el-menu-item>
+            <el-menu-item class="end">注册</el-menu-item>
+          </el-menu-item>
 
-      </div>
-    </div>
-
-    <div>
-      <router-view>
-      </router-view>
-    </div>
+        </el-menu>
+      </el-header>
+      <el-main>
+        <router-view />
+      </el-main>
+      <el-footer>
+        <div class="footer-item-box">
+          <span class="footer-item-title">酒店加盟</span>
+          <span class="footer-item" v-for="(item, index) in  hotelFranchise" :key="index">
+            {{ item.label }}:{{ item.value }}</span>
+        </div>
+        <div class="footer-item-box">
+          <span class="footer-item-title">意见反馈</span>
+          <span class="footer-item" v-for="(item, index) in  Feedback" :key="index">
+            {{ item.label }}:{{ item.value }}</span>
+        </div>
+        <div class="footer-item-box">
+          <span class="footer-item-title">关于我们</span>
+          <span class="footer-item" v-for="(item, index) in  Feedback" :key="index">
+            {{ item.label }}:{{ item.value }}</span>
+        </div>
+      </el-footer>
+    </el-container>
   </div>
 </template>
-
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const activeIndex2 = ref('1');
+const activeIndex = ref<string>(`/`)
+
 const handleSelect = (key: string, keyPath: string[]) => {
   console.log(key, keyPath);
 };
 const userName = ref(`admin`)
+const hotelFranchise = ref([
+  { value: `18941118888`, label: `电话` },
+  { value: `4008-123123`, label: `座机` },
+  { value: `辽宁省鞍山市`, label: `地址` },
+])
+
+const Feedback = ref([
+  { value: `by15242952083@outlook.com`, label: `邮箱` },
+  { value: `4008-123123`, label: `传真` },
+])
 </script>
-
 <style lang="scss" scoped>
-.menu {
-  padding: 0 3vw;
-  width: 94vw;
-  height: 100%;
+.common-layout {
+  width: 100vw;
+  height: 100vh;
 
-  // position: absolute;
-  // top: 0;
-  ::v-deep(.el-menu) {
-    .el-menu-item {
-      margin: 0 1vw;
-    }
+  ::v-deep(.el-container) {
+    width: 100%;
+    height: 100%;
 
-    .menu-box {
-      display: flex;
+    .el-header {
+      .logo {
+        .name {
+          display: flex;
+          width: 5vw;
+          color: #ffbe76;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          font-size: 30px;
+        }
+
+        .hotel {
+          // margin-left: 0.5vw;
+          display: flex;
+          width: 5vw;
+          color: #ffbe76;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          font-size: 30px;
+          // margin-left: 5px;
+        }
+
+      }
 
       .el-menu {
-        // width: 60vw
+        justify-content: space-between;
       }
+
+      .login-box {
+        background-color: #ffbe76;
+
+        .el-menu-item {
+          &:hover {
+            background-color: #ffbe76;
+            color: white;
+          }
+
+          &.is-active {
+            background-color: #ffbe76;
+            color: white;
+          }
+        }
+      }
+
     }
 
-    .logo-box {
-      width: 35vw;
+    .el-footer {
+      height: 12vh;
+      background-color: black;
+      width: 98vw;
+      // position: fixed;
+      bottom: 0;
       display: flex;
-      justify-content: flex-start;
-      .name {
-        display: flex;
-        width: 5vw;
-        color: #e67e22;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        font-size: 30px;
-      }
-
-      .hotel {
-        // margin-left: 0.5vw;
-        display: flex;
-        width: 5vw;
-        color: #e67e22;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        font-size: 30px;
-        // margin-left: 5px;
-      }
-
-    }
-
-    .end {
-      margin-right: 17vw;
-    }
-
-    .login {
-      background-color: #e67e22;
-      margin: 0;
-      overflow: hidden;
-      width: 20vw;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: center;
+      margin-left: 1vw;
 
-      .el-sub-menu__title {
-        color: white;
-        margin: 0 5px;
-        font-size: 20px;
+      .footer-item-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 33%;
+        height: 100%;
+        justify-content: space-evenly;
+
+        .footer-item-title {
+          color: white;
+          position: relative;
+          padding: 2px 0;
+
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background-color: white;
+          }
+        }
+
+        .footer-item {
+          color: white;
+        }
       }
-
-      .el-sub-menu__title {
-        background-color: #e67e22;
-        color: white;
-
-      }
-
     }
   }
 }

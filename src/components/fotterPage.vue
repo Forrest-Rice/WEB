@@ -1,7 +1,7 @@
 <!--
  * @Author: By
  * @Date: 2022-05-24 01:37:45
- * @LastEditTime: 2022-05-24 02:36:27
+ * @LastEditTime: 2022-05-24 15:39:22
  * @LastEditors: By
  * @Description: bbb
  * @FilePath: \WEB\src\components\fotterPage.vue
@@ -39,12 +39,11 @@ const hotelFranchise = ref([
 const Feedback = ref([
     { value: `by15242952083@outlook.com`, label: `邮箱` },
     { value: `4008-123123`, label: `传真` },
-    // { value: `1234567`, label: `电话` },
 ])
 </script>
 <style lang="scss" scoped>
 .footer {
-    height: 14vh;
+    height: 12vh;
     background-color: black;
     width: 94vw;
     position: fixed;

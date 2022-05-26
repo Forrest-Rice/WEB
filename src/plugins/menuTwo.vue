@@ -1,7 +1,7 @@
 <!--
  * @Author: By
  * @Date: 2022-05-24 15:29:41
- * @LastEditTime: 2022-05-24 17:46:56
+ * @LastEditTime: 2022-05-25 21:34:10
  * @LastEditors: By
  * @Description:
  * @FilePath: \WEB\src\plugins\menuTwo.vue
@@ -91,7 +91,6 @@ const Feedback = ref([
         }
 
         .hotel {
-          // margin-left: 0.5vw;
           display: flex;
           width: 5vw;
           color: #ffbe76;
@@ -99,7 +98,6 @@ const Feedback = ref([
           justify-content: center;
           align-items: center;
           font-size: 30px;
-          // margin-left: 5px;
         }
 
       }
@@ -117,6 +115,11 @@ const Feedback = ref([
             color: white;
           }
 
+          &:focus {
+            background-color: #ffbe76;
+            color: white;
+          }
+
           &.is-active {
             background-color: #ffbe76;
             color: white;
@@ -130,7 +133,6 @@ const Feedback = ref([
       height: 12vh;
       background-color: black;
       width: 98vw;
-      // position: fixed;
       bottom: 0;
       display: flex;
       justify-content: space-between;
